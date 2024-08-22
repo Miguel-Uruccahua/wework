@@ -17,5 +17,9 @@ Application with login Firebase and realm for chat
 
 ## Screenshots
 
-![App Screenshot](https://github.com/Miguel-Uruccahua/ReminderApp/blob/main/pictures/1.png)
+![App Screenshot](https://github.com/Miguel-Uruccahua/wework/blob/main/pictures/1.png)
+![App Screenshot](https://github.com/Miguel-Uruccahua/wework/blob/main/pictures/2.png)
+![App Screenshot](https://github.com/Miguel-Uruccahua/wework/blob/main/pictures/3.png)
+![App Screenshot](https://github.com/Miguel-Uruccahua/wework/blob/main/pictures/4.png)
+![App Screenshot](https://github.com/Miguel-Uruccahua/wework/blob/main/pictures/5.png)
 
