@@ -5,6 +5,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.wework.domain.analytics.models.AnalyticsModel
+import com.example.wework.domain.analytics.AnalyticsRepository
 import com.example.wework.domain.login.AuthRepository
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.firebase.FirebaseException
@@ -18,7 +20,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class LoginViewModel @Inject constructor(
-    private val authRepository: AuthRepository
+    private val authRepository: AuthRepository,
+    private val analyticsRepository: AnalyticsRepository,
 ) : ViewModel() {
 
     lateinit var verificationCode: String
@@ -136,7 +139,16 @@ class LoginViewModel @Inject constructor(
         }
     }
 
+    fun sendData(){
+        val analyticsModel = AnalyticsModel(title = "Mititle", analyticsString = listOf(Pair("Ingreso","Account")))
+        viewModelScope.launch{
+            analyticsRepository.sendData(analyticsModel)
+        }
+    }
+
 }
+
+
 
 sealed class LoginType(){
     object Github: LoginType()

@@ -29,6 +29,8 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    override fun onBackPressed() {}
+    override fun onBackPressed() {
+        throw RuntimeException("Test Crash")
+    }
 }
 

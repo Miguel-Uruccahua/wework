@@ -50,7 +50,6 @@ import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.common.api.ApiException
 
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun LoginScreen(
     navHostController: NavHostController, loginViewModel: LoginViewModel = hiltViewModel()
@@ -142,6 +141,7 @@ fun contentLogin(navHostController: NavHostController,loginViewModel: LoginViewM
                     loginViewModel.onLoginSelected(LoginType.Email, activity,
                         navigateToHome = { navHostController.navigate(TopBar) },
                         showError = { errorMessage = it })
+                    loginViewModel.sendData()
                 }) { Text(text = "Ingresar") }
 
             Spacer(modifier = Modifier.size(10.dp))

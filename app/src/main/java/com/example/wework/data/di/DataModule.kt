@@ -1,10 +1,12 @@
 package com.example.wework.data.di
 
 import com.example.wework.data.repository.AccountRepositoryImpl
+import com.example.wework.data.repository.AnalyticsRepositoryImpl
 import com.example.wework.data.repository.AuthRepositoryImpl
 import com.example.wework.data.repository.MessageRepositoryImpl
 import com.example.wework.data.repository.SignupRepositoryImpl
 import com.example.wework.domain.account.AccountRepository
+import com.example.wework.domain.analytics.AnalyticsRepository
 import com.example.wework.domain.home.MessageRepository
 import com.example.wework.domain.login.AuthRepository
 import com.example.wework.domain.signup.SignupRepository
@@ -41,5 +43,11 @@ internal interface DataModule {
     fun bindsSignUpRepository(
         signupRepositoryImpl: SignupRepositoryImpl
     ): SignupRepository
+
+    @Singleton
+    @Binds
+    fun bindsAnalyticsRepository(
+        analyticsRepositoryImpl: AnalyticsRepositoryImpl
+    ): AnalyticsRepository
 
 }

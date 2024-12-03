@@ -6,6 +6,7 @@ plugins {
     alias(libs.plugins.com.google.gms.google.services) apply false
     alias(libs.plugins.android.hilt) apply false
     alias(libs.plugins.kotlin.serialization) apply false
+    alias(libs.plugins.crashlytics) apply false
 }
 true
  // Needed to make the Suppress annotation work for the plugins block

@@ -6,7 +6,7 @@ plugins {
     id("kotlin-kapt")
     alias(libs.plugins.android.hilt)
     alias(libs.plugins.kotlin.serialization)
-
+    alias(libs.plugins.crashlytics)
 }
 
 
@@ -79,6 +79,7 @@ dependencies {
     //Firebase
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.analytics)
+    implementation(libs.firebase.crashlytics)
     implementation(libs.firebase.database)
     implementation(libs.firebase.authentication)
     implementation("com.google.android.gms:play-services-auth:20.7.0")
